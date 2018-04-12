@@ -4,9 +4,10 @@ It's Not Spock. Really. But close.
 # example test
 
 ```groovy
+@Unroll
 class SomeClassSpecification extends Specification {
 
-    def "should calculate some values"(){
+    def "should calculate value for input #case.input"(){
         
         given:
         def calculator = new Calculator()
