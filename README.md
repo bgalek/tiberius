@@ -4,18 +4,26 @@ It's Not Spock. Really. But close.
 # example test
 
 ```groovy
+
+@BeforeTest // JUnit
+somethingBeforeTest(){
+}
+
 @Unroll
 class SomeClassSpecification extends Specification {
 
     def "should calculate value for input #case.input"(){
         
-        given:
+        given: 'calculator instance'
         def calculator = new Calculator()
 
-        when:
+        when: 'calculating'
         def calculation = calculator.compute(case.input)
 
-        then:
+        and: 'recording stats'
+        calculation.recordStats()
+
+        then: 'calculate'
         calculation == case.calculation
         
         where:
@@ -26,6 +34,11 @@ class SomeClassSpecification extends Specification {
     }
     
 }
+
+@AfterTest // JUnit
+somethingAfterTest(){
+}
+
 ```
 
 # example test 2
