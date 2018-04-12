@@ -3,7 +3,7 @@ It's Not Spock. Really. But close.
 
 # example test
 
-```
+```groovy
 class SomeClassSpecification extends Specification {
 
     def "should calculate some values"(){
@@ -29,7 +29,7 @@ class SomeClassSpecification extends Specification {
 
 # example test 2
 
-```
+```groovy
 class SomeClassSpecification extends Specification {
 
     def "should calculate some values"(){
