@@ -46,3 +46,8 @@ class SomeClassSpecification extends Specification {
     
 }
 ```
+
+
+#It looks like Spock!
+
+Yeah, without **mocks**, **stubs**.
